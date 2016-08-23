@@ -1,4 +1,4 @@
-package com.nmq.servlet;
+package com.nmq.servlet.util;
 
 import javax.imageio.stream.IIOByteBuffer;
 import java.security.MessageDigest;

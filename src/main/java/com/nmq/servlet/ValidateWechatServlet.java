@@ -1,5 +1,7 @@
 package com.nmq.servlet;
 
+import com.nmq.servlet.util.ValidateUtils;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -21,5 +23,17 @@ public class ValidateWechatServlet extends HttpServlet {
         if(ValidateUtils.encode(timestamp,nonce).equals(signature)){
             pw.write(echostr);
         }
+    }
+
+    /**
+     * 微信发送消息接收
+     * @param req
+     * @param resp
+     * @throws ServletException
+     * @throws IOException
+     */
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
     }
 }
