@@ -1,6 +1,5 @@
-package com.nmq.servlet.util;
+package com.nmq.util;
 
-import javax.imageio.stream.IIOByteBuffer;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
