@@ -54,11 +54,15 @@ public class ValidateWechatServlet extends HttpServlet {
             System.out.println(key+":"+map.get(key));
         }*/
         if(map.get("MsgType").equals(MessageUtlis.MESSAGE_TYPE_TEXT)){
+
             //文本消息
             String toUserName = map.get("ToUserName");
             String fromUserName = map.get("FromUserName");
             String content = map.get("Content");
             String msgId = map.get("MsgId");
+            if("?".equals(content)||"？".equals(content.trim())){
+
+            }
             //构建回复消息
              MessageText messageText=new MessageText();
             messageText.setFromUserName(toUserName);
